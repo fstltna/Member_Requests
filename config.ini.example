@@ -1,0 +1,3 @@
+Server_List_File	ServerCSV.csv
+Email_Subj	Server useage information request
+Email_From	foo@bar.com
