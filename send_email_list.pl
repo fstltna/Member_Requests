@@ -74,7 +74,7 @@ Dear $OWNER_EMAIL,
 You have a server with us and we are just checking in to see if you still want this server. If you are still using it you can keep using it. If you no longer want it please let us know so we can remove it. We will be checking in again in another 3 months or so.
 
 Regards,
-The $WEBSITE_NAME Hosting provider
+The $WEBSITE_NAME hosting provider
 END_MESSAGE_BODY
 		$email = Email::Simple->create(
 		header => [
@@ -97,7 +97,7 @@ while (my $row = <$fh>)
 	chomp $row;
 	# print "$row\n";
 	($SERVER_NAME, $OWNER_EMAIL, $WEBSITE_NAME) = split (/	/, $row);
-	if ($WEBSITE_NAME eq "")
+	if (($WEBSITE_NAME eq "") || ($WEBSITE_NAME eq "Unknown"))
 	{
 		$WEBSITE_NAME = "Pocketmud/Minecity/SynchronetBBS/Citadel";
 	}
